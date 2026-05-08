@@ -56,6 +56,22 @@ Configures the AXI Central DMA (CDMA) IP core to perform high-throughput memory-
 
 > CDMA achieves up to **3.09× speedup** over CPU-based copy, with speedup increasing with transfer size as DMA overhead becomes negligible relative to transfer time.
 
+## Hardware Configuration (XPS)
+ 
+The C++ source files represent only the software layer. Each module required manual hardware system design in Xilinx Platform Studio (XPS) before a single line of code could run — work that is invisible from the code alone but central to how embedded systems on SoCs are built.
+ 
+Across all modules, the following involved:
+ 
+- **IP instantiation** — adding AXI GPIO, AXI Timer, AXI CDMA, and AXI Interconnect IP cores to the Zynq processing system via the XPS IP catalog
+- **Bus interface wiring** — manually connecting Master/Slave AXI ports between the processor, interconnects, and peripherals (e.g. `M_AXI_GP1 → axi_interconnect_gp1 → S_AXI_LITE` for CDMA control; `M_AXI → axi_interconnect_hp → S_AXI_HP0/HP2` for DMA data paths)
+- **Clock and reset routing** — connecting `FCLK_CLK0` and `FCLK_RESET0_N` signals to every IP instance and BUS_IF port in the system
+- **Interrupt routing** — connecting the AXI Timer interrupt output to the processor's `IRQ_F2P` pin for FPGA-to-ARM interrupt delivery
+- **High-performance port configuration** — enabling and assigning DDR address ranges to Zynq HP slave ports (HP0 at `0x20000000`, HP2 at `0x30000000`)
+- **Address generation** — mapping base addresses for all peripherals, referenced in software via `xparameters.h`
+- **UCF pin constraints** — constraining external ports (GPIO outputs, PWM output, capture trigger input) to specific physical pins on the ZC702
+- **Synthesis, implementation, and bitstream generation** — compiling the full hardware design through PlanAhead before exporting to SDK
+
+This process reflects how real SoC hardware systems are assembled at the interconnect level — defining the hardware architecture that the software then drives.
 
 ## Repository Structure
 
@@ -77,7 +93,7 @@ zynq-axi-peripheral-interfacing/
 ```
 
 
-## Skills Demonstrated
+## Skills Acquired
 
 - Bare-metal C++ on ARM Cortex-A9 (no OS)
 - AXI4 / AXI4-Lite protocol and peripheral integration
