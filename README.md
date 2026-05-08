@@ -92,7 +92,7 @@ zynq-axi-peripheral-interfacing/
 
 **Dipita Sinha**  
 Concordia University — Gina Cody School of Engineering and Computer Science  
-
+COEN 317 - Microprocessor-based Systems
 
 ## License
 
