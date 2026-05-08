@@ -60,7 +60,7 @@ Configures the AXI Central DMA (CDMA) IP core to perform high-throughput memory-
 ## Repository Structure
 
 ```
-zynq-axi-peripherals/
+zynq-axi-peripheral-interfacing/
 ├── axi-gpio-pl/
 │   ├── main.cc              # C++ application
 │   ├── lab2_AND.vhd         # 8-bit AND gate in VHDL
