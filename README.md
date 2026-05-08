@@ -56,7 +56,6 @@ Configures the AXI Central DMA (CDMA) IP core to perform high-throughput memory-
 
 > CDMA achieves up to **3.09× speedup** over CPU-based copy, with speedup increasing with transfer size as DMA overhead becomes negligible relative to transfer time.
 
----
 
 ## Repository Structure
 
@@ -77,7 +76,6 @@ zynq-axi-peripherals/
     └── main.cpp
 ```
 
----
 
 ## Skills Demonstrated
 
