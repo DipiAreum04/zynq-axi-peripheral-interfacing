@@ -1,6 +1,6 @@
 # Zynq AXI Peripherals
 
-Bare-metal embedded C++ applications on the **Xilinx Zynq-7000 ZC702** board, a SoC containing ARM Cortex-A9 PS and FPGA PL, demonstrating hardware/software co-design across the processor–programmable logic (PS/PL) boundary using the AXI4 protocol. Each module is self-contained and targets a distinct embedded systems concept: memory-mapped I/O, hardware timers, interrupt-driven programming, and DMA-accelerated memory transfers.
+Bare-metal embedded C++ applications on the **Xilinx Zynq-7000 ZC702** board, a SoC containing ARM Cortex-A9 PS and FPGA PL, demonstrating hardware/software co-design across the processor–programmable logic (PS/PL) boundary using the AXI4 protocol. Each module is self-contained and targets a distinct embedded systems concept: memory-mapped I/O, hardware timers, interrupt-driven programming, and DMA-accelerated memory transfers. Developed as part of the Microprocessor-based Systems course at Concordia University.
 
 
 ## Platform
@@ -87,3 +87,13 @@ zynq-axi-peripheral-interfacing/
 - ARM Generic Interrupt Controller (GIC) configuration
 - DMA engine configuration and cache coherency management
 - Hardware performance benchmarking
+
+## Author
+
+**Dipita Sinha**  
+Concordia University — Gina Cody School of Engineering and Computer Science  
+
+
+## License
+
+Developed for academic purposes. Not licensed for commercial use.
