@@ -42,7 +42,7 @@ Configures the AXI Central DMA (CDMA) IP core to perform high-throughput memory-
 
 **Key concepts:** AXI CDMA, DMA vs CPU memory transfer, AXI HP ports, cache coherency (`Xil_DCacheFlush`, `Xil_DCacheInvalidateRange`), performance benchmarking
 
-#### Benchmark Results (50 MHz clock, Zynq ZC702)
+### Benchmark Results (50 MHz clock, Zynq ZC702)
 
 | Array Size (u32) | SW Cycles | CDMA Cycles | Speedup |
 |-----------------|-----------|-------------|---------|
