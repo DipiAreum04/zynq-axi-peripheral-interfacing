@@ -6,6 +6,7 @@ Bare-metal embedded C++ applications on the **Xilinx Zynq-7000 ZC702** board, a 
 ## Platform
 
 | | |
+|---|---|
 | **Board** | Xilinx ZC702 Evaluation Board |
 | **SoC** | Zynq-7000 XC7Z020 (ARM Cortex-A9 Processor + Artix-7 FPGA) |
 | **Toolchain** | Xilinx ISE 14.7 / XPS / SDK |
